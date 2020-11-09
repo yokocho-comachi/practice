@@ -1,0 +1,17 @@
+{
+    "name": "practice/practice",
+    "description": "practice oop",
+    "type": "project",
+    "authors": [
+        {
+            "name": "yokomura kazuki",
+            "email": "foxtail814@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Practice\\": "src/"
+        }
+    }
+}
