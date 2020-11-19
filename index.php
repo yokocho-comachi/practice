@@ -51,7 +51,9 @@ $teacher = $headTeacher->createTeacher('渡辺', new StudentList($students));
  : 条件2. 必要であればファイルの追加・修正をしても良い
  */
 
-var_dump($teacher);
+foreach ($teacher->getStudentList() as $student) {
+    echo $student->name . ':' . $student->deviation . "\n";
+}
 
  /*
   : 推定作業時間 1 ~ 2h
@@ -61,3 +63,7 @@ var_dump($teacher);
   : 条件1. 必要であればファイルの追加・修正をしても良い
   : 条件2. 問1の処理と共通化を図ること
   */
+
+  foreach ($headTeacher->getTeacherList() as $teacher) {
+      echo $teacher->getName() . "\n";
+  }

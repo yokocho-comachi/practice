@@ -35,4 +35,24 @@ class Teacher
     {
         $this->studentList = $studentList;
     }
+
+    /**
+     * 生徒リストの取得
+     *
+     * @return StudentList|null
+     */
+    public function getStudentList()
+    {
+        return $this->studentList;
+    }
+
+    /**
+     * 名前の取得
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
 }

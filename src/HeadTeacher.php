@@ -44,4 +44,14 @@ class HeadTeacher extends Teacher
 
         return $teacher;
     }
+
+    /**
+     * 先生一覧の取得
+     *
+     * @return TeacherList
+     */
+    public function getTeacherList(): TeacherList
+    {
+        return $this->teacherList;
+    }
 }

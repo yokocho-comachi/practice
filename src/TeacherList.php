@@ -9,10 +9,13 @@ use Practice\{
 /**
  * 先生のリスト
  */
-class TeacherList
+class TeacherList extends Iteratable
 {
     /** @var array $users 生徒のリスト **/
-    private $teachers = [];
+    protected $teachers = [];
+
+    /** @var string iteratableProperty 回せるプロパティ **/
+    protected $iteratableProperty = 'teachers';
 
     /**
      * 先生の追加
