@@ -3,8 +3,13 @@
 namespace Practice;
 
 use Practice\{
-    Student,
     Iteratable
+};
+use Practice\Students\{
+    Student,
+    BadStudent,
+    GoodStudent,
+    OrdinaryStudent
 };
 
 /**
@@ -26,7 +31,7 @@ class StudentList extends Iteratable
     public function __construct(array $students = [])
     {
         foreach($students as $student) {
-            $this->add(new Student(...array_values($student)));
+            $this->add($this->createStudent($student));
         }
     }
 
@@ -57,5 +62,23 @@ class StudentList extends Iteratable
         }
 
         return new static($newList);
+    }
+
+    /**
+     * 生徒の作成
+     *
+     * @param  array  $student 生徒情報
+     * @return Student
+     */
+    private function createStudent(array $student)
+    {
+        if ($student['deviation'] <= 30) {
+            return new BadStudent(...array_values($student));
+        }
+        if ($student['deviation'] >= 60) {
+            return new GoodStudent(...array_values($student));
+        }
+
+        return new OrdinaryStudent(...array_values($student));
     }
 }

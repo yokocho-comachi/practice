@@ -1,6 +1,6 @@
 <?php
 
-namespace Practice;
+namespace Practice\Students;
 
 /**
  * 生徒
