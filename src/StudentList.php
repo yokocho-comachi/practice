@@ -3,16 +3,20 @@
 namespace Practice;
 
 use Practice\{
-    Student
+    Student,
+    Iteratable
 };
 
 /**
  * 生徒のリスト
  */
-class StudentList
+class StudentList extends Iteratable
 {
     /** @var array $users 生徒のリスト **/
-    private $students = [];
+    protected $students = [];
+
+    /** @var string iteratableProperty 回せるプロパティ **/
+    protected $iteratableProperty = 'students';
 
     /**
      * コンストラクタ
